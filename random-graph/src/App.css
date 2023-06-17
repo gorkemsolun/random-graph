@@ -1,0 +1,29 @@
+.App {
+}
+
+.left-pane {
+  display: flex;
+  flex-basis: 15%;
+  background-color: antiquewhite;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout {
+  flex-grow: 1;
+}
+
+.title {
+  margin: 15px;
+  padding: 15px;
+  text-align: center;
+  color: rebeccapurple;
+}
+
+.new-random-graph-button {
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  font-size: 20px;
+}
