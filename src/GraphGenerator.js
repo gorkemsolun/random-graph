@@ -8,22 +8,7 @@ function GraphGenerator (props) {
     let cy = cytoscape({
       container: containerRef.current,
       elements: props.graphElements,
-      style: [
-        {
-          selector: "node",
-          style: {
-            "background-color": "lightblue",
-            label: "data(id)",
-          },
-        },
-        {
-          selector: "edge",
-          style: {
-            width: 2,
-            "line-color": "gray",
-          },
-        },
-      ],
+      style: props.style,
       layout: { name: props.layout },
     }, []);
 

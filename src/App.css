@@ -1,7 +1,7 @@
 .App {
 }
 
-.left-pane {
+.pane {
   display: flex;
   flex-basis: 15%;
   background-color: antiquewhite;
@@ -31,12 +31,51 @@
 .layout-select-options {
   background-color: whitesmoke;
   text-align: center;
-  margin: 15px;
   padding: 15px;
   font-size: 20px;
 }
 
 .layout-option {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.layout-type-title {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.layout-type-container {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-container {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.node-color-title {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.node-color-select-options {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.node-color-option {
   text-align: center;
   margin: 20px;
   padding: 20px;
