@@ -1,16 +1,23 @@
 import React, { useRef, useEffect } from "react";
 import cytoscape from "cytoscape";
+import coseBilkent from "cytoscape-cose-bilkent";
+import klay from "cytoscape-klay";
 
-function GraphGenerator (props) {
+function GraphGenerator(props) {
   const containerRef = useRef();
 
   useEffect(() => {
-    let cy = cytoscape({
-      container: containerRef.current,
-      elements: props.graphElements,
-      style: props.style,
-      layout: { name: props.layout },
-    }, []);
+    cytoscape.use(klay);
+    cytoscape.use(coseBilkent);
+    let cy = cytoscape(
+      {
+        container: containerRef.current,
+        elements: props.graphElements,
+        style: props.style,
+        layout: { name: props.layout },
+      },
+      []
+    );
 
     return () => {
       cy.destroy();
@@ -24,9 +31,8 @@ function GraphGenerator (props) {
         width: "100vw",
         height: "100vh",
       }}
-    >
-    </div>
+    ></div>
   );
-};
+}
 
 export default GraphGenerator;
