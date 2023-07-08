@@ -40,8 +40,7 @@ function App() {
   };
 
   const hangleAcyclicChange = (event) => {
-    setAcyclic(false);
-    console.log(event.target.value);
+    setAcyclic(event.target.checked);
   };
 
   const handleColorChange = (event) => {
