@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import cytoscape from "cytoscape";
+import styles from "./App.css";
 import coseBilkent from "cytoscape-cose-bilkent";
 import klay from "cytoscape-klay";
 
@@ -13,7 +14,7 @@ function GraphGenerator(props) {
       {
         container: containerRef.current,
         elements: props.graphElements,
-        style: props.style,
+        style: props.graphStyle,
         layout: { name: props.layout },
       },
       []
@@ -23,13 +24,13 @@ function GraphGenerator(props) {
       cy.destroy();
     };
   });
-
   return (
     <div
       ref={containerRef}
       style={{
+        top: "5vh",
         width: "100vw",
-        height: "100vh",
+        height: "95vh",
       }}
     ></div>
   );

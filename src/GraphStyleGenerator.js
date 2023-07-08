@@ -4,7 +4,7 @@ export const graphStyleGenerator = (data) => {
     selector: "node",
     style: {
       label: "data(id)",
-      'background-color': data.nodeColor,
+      "background-color": data.nodeColor,
     },
   });
   style.push({

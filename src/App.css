@@ -1,56 +1,47 @@
-.App {
-}
-
 .pane {
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
-  flex-basis: 15%;
-  background-color: antiquewhite;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   z-index: 99;
 }
 
 .layout {
-  flex-grow: 1;
+  top: "5vh";
+  width: "100vw";
+  height: "95vh";
 }
 
 .title {
-  margin: 15px;
-  padding: 15px;
+  font-size: 15px;
   text-align: center;
-  color: rebeccapurple;
 }
 
 .new-random-graph-button {
   text-align: center;
-  margin: 15px;
-  padding: 15px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 15px;
 }
 
 .layout-select-options {
   background-color: whitesmoke;
   text-align: center;
-  padding: 10px;
   margin: 5px;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .layout-option {
   text-align: center;
-  margin: 20px;
-  padding: 20px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 10px;
 }
 
 .layout-type-title {
   text-align: center;
-  padding: 10px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 10px;
 }
 
 .layout-type-container {
@@ -71,23 +62,21 @@
 
 .node-color-title {
   text-align: center;
-  padding: 10px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 10px;
 }
 
 .node-color-select-options {
   background-color: whitesmoke;
   text-align: center;
   margin: 5px;
-  padding: 10px;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .node-color-option {
   text-align: center;
-  margin: 20px;
-  padding: 20px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 10px;
 }
 
 .edge-size-container {
@@ -100,16 +89,14 @@
 
 .edge-size-title {
   text-align: center;
-  padding: 10px;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .edge-size-input {
   text-align: center;
   background-color: whitesmoke;
-  margin: 10px;
-  padding: 10px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 10px;
 }
 
 .edge-probability-container {
@@ -122,16 +109,15 @@
 
 .edge-probability-title {
   text-align: center;
-  padding: 10px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 10px;
 }
 
 .edge-probability-input {
   text-align: center;
   background-color: whitesmoke;
-  margin: 10px;
-  padding: 10px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 10px;
 }
 
 .acyclic-container {
@@ -140,19 +126,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
 }
 
 .acyclic-title {
   text-align: center;
-  padding: 10px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 10px;
 }
 
 .acyclic-input {
   text-align: center;
   background-color: whitesmoke;
-  margin: 10px;
-  padding: 10px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 10px;
 }
