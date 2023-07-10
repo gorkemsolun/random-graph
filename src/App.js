@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GraphGenerator from "./GraphGenerator.js";
-import styles from "./App.css";
+import  "./App.css";
 import { generateElements } from "./GenerateElements.js";
 import { graphStyleGenerator } from "./GraphStyleGenerator.js";
 
@@ -99,7 +99,6 @@ function App() {
         key={count}
         layout={layout}
         graphStyle={graphStyle}
-        className="layout"
       />
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import cytoscape from "cytoscape";
-import styles from "./App.css";
+import "./App.css";
 import coseBilkent from "cytoscape-cose-bilkent";
 import klay from "cytoscape-klay";
 
