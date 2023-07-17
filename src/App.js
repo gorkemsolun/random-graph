@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
 import GraphGenerator from "./GraphGenerator.js";
-import  "./App.css";
+import "./App.css";
 import { generateElements } from "./GenerateElements.js";
 import { graphStyleGenerator } from "./GraphStyleGenerator.js";
 
 function App() {
-  const layouts = ["circle", "grid", "random", "concentric", "breadthfirst", "cose-bilkent", "klay"];
+  const layouts = [
+    "circle",
+    "grid",
+    "random",
+    "concentric",
+    "breadthfirst",
+    "cose-bilkent",
+    "klay",
+  ];
   const colors = ["red", "black", "grey", "blue", "green", "yellow", "brown"];
   const [count, setCount] = useState(0);
   const [edgeProbability, setEdgeProbability] = useState(0.02);
@@ -13,18 +21,24 @@ function App() {
   const [nodeColor, setNodeColor] = useState("red");
   const [edgeSize, setEdgeSize] = useState(2);
   const [layout, setLayout] = useState("circle");
-  const [graphElements, setGraphElements] = useState(generateElements({edgeProbability: edgeProbability, acyclic: acyclic}));
-  const [graphStyle, setGraphStyle] = useState(
-    graphStyleGenerator({ nodeColor: nodeColor, edgeSize: edgeSize})
+  const [graphElements, setGraphElements] = useState(
+    generateElements({ edgeProbability: edgeProbability, acyclic: acyclic })
   );
-  
+  const [graphStyle, setGraphStyle] = useState(
+    graphStyleGenerator({ nodeColor: nodeColor, edgeSize: edgeSize })
+  );
+
   useEffect(() => {
-    setGraphStyle(graphStyleGenerator({ nodeColor: nodeColor, edgeSize: edgeSize}));
+    setGraphStyle(
+      graphStyleGenerator({ nodeColor: nodeColor, edgeSize: edgeSize })
+    );
   }, [nodeColor, edgeSize]);
 
   const handleClick = () => {
     setCount(count + 1);
-    setGraphElements(generateElements({edgeProbability: edgeProbability, acyclic: acyclic}));
+    setGraphElements(
+      generateElements({ edgeProbability: edgeProbability, acyclic: acyclic })
+    );
   };
 
   const handleEdgeProbability = (event) => {
@@ -50,21 +64,40 @@ function App() {
   return (
     <div className="App">
       <div className="pane">
-        <h1 className="title">Random Graph Generator</h1>
+        <div className="title-container">
+          <img src="./assets/graph.svg"></img>
+          <h1 className="title">Random Graph Generator</h1>
+        </div>
+
         <button className="new-random-graph-button" onClick={handleClick}>
           New Random Graph
         </button>
         <div className="acyclic-container">
           <h1 className="acyclic-title">Acyclic</h1>
-          <input className = "acyclic-input" type="checkbox" onChange={hangleAcyclicChange} checked={acyclic}/>
+          <input
+            className="acyclic-input"
+            type="checkbox"
+            onChange={hangleAcyclicChange}
+            checked={acyclic}
+          />
         </div>
         <div className="edge-probability-container">
           <h1 className="edge-probability-title">Edge Probability</h1>
-          <input className="edge-probability-input" value={edgeProbability} type="number" onChange={handleEdgeProbability}></input>
+          <input
+            className="edge-probability-input"
+            value={edgeProbability}
+            type="number"
+            onChange={handleEdgeProbability}
+          ></input>
         </div>
         <div className="edge-size-container">
           <h1 className="edge-size-title">Edge Size</h1>
-          <input className="edge-size-input" value={edgeSize} type="number" onChange={handleEdgeSize}></input>
+          <input
+            className="edge-size-input"
+            value={edgeSize}
+            type="number"
+            onChange={handleEdgeSize}
+          ></input>
         </div>
         <div className="color-container">
           <h1 className="node-color-title">Node Color</h1>
