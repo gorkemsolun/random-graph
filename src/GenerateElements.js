@@ -1,3 +1,4 @@
+// generates elements
 export const generateElements = (data) => {
   let verticeCount = Math.floor(Math.random() * 100);
   let edges = [];
