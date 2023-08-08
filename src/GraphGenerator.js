@@ -1,3 +1,4 @@
+// graph generator
 import React, { useRef, useEffect } from "react";
 import cytoscape from "cytoscape";
 import "./App.css";
